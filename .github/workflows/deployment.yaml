@@ -1,7 +1,9 @@
 name: Deploy project
-on: push
+# on - specifies the event that will trigger the jbo, we can have multipe events
+on: [push,workflow_dispatch]
 jobs:
   test:
+    # each job must to have defined a runner even if is the same for each one
     runs-on: ubuntu-latest
     steps:
       - name: Get code test
