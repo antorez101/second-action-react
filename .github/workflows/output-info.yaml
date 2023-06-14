@@ -6,3 +6,5 @@ jobs:
     steps:
       - name: Output github-context
         run: echo "${{ toJson(github) }}"
+      - name: Clone url
+        run: echo "${{ github.clone_url }}"
